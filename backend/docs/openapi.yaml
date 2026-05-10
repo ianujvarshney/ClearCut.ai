@@ -1,0 +1,17 @@
+paths:
+  /auth/register:
+    post:
+      summary: Register a user
+      tags: [Auth]
+  /images/remove-background:
+    post:
+      summary: Queue background removal
+      tags: [Images]
+      security:
+        - bearerAuth: []
+  /public/remove-background:
+    post:
+      summary: Public developer API background removal endpoint
+      tags: [Developer API]
+      security:
+        - apiKeyAuth: []

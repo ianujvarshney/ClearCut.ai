@@ -1,0 +1,32 @@
+
+> clearcut-ai-saas@1.0.0 dev
+> next dev --port 3000
+
+   ▲ Next.js 15.5.16
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.18:3000
+
+ ✓ Starting...
+ ✓ Ready in 4.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 14.3s (1622 modules)
+ GET / 200 in 16092ms
+ GET / 200 in 414ms
+ ○ Compiling /blog ...
+ ✓ Compiled /pricing in 3.3s (1625 modules)
+ GET / 200 in 1997ms
+ GET /blog 200 in 4008ms
+ GET /api-docs 200 in 3397ms
+ GET /pricing 200 in 2596ms
+ ○ Compiling /register ...
+ ✓ Compiled /login in 1873ms (1632 modules)
+ GET /login 200 in 1528ms
+ GET /register 200 in 2173ms
+ GET /blog 200 in 100ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 887ms (1638 modules)
+ GET /contact 200 in 1248ms
+ GET /pricing 200 in 345ms
+ GET / 200 in 71ms
+ GET / 200 in 61ms
+ GET / 200 in 560ms

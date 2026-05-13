@@ -1,0 +1,84 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches: [main, staging]
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-ci-cd.yml"
+  pull_request:
+    paths:
+      - "backend/**"
+
+env:
+  REGISTRY: ghcr.io
+  API_IMAGE: ghcr.io/${{ github.repository }}/clearcut-api
+  AI_IMAGE: ghcr.io/${{ github.repository }}/clearcut-ai-inference
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    services:
+      mongo:
+        image: mongo:7
+        ports: ["27017:27017"]
+      redis:
+        image: redis:7-alpine
+        ports: ["6379:6379"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
+
+  build-images:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: backend
+          push: true
+          tags: ${{ env.API_IMAGE }}:${{ github.sha }},${{ env.API_IMAGE }}:latest
+      - uses: docker/build-push-action@v6
+        with:
+          context: backend/ai-service
+          push: true
+          tags: ${{ env.AI_IMAGE }}:${{ github.sha }},${{ env.AI_IMAGE }}:latest
+
+  deploy-staging:
+    needs: build-images
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/staging'
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deploy staging with kubectl/helm and image tag ${{ github.sha }}"
+
+  deploy-production:
+    needs: build-images
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deploy production with rolling update and keep previous ReplicaSet for rollback"

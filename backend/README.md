@@ -8,6 +8,8 @@ Production-grade Node.js, Express, TypeScript, MongoDB, and Redis backend for an
 - `src/models`: optimized Mongoose collections for users, sessions, RBAC, images, uploads, jobs, billing, credits, API keys, notifications, activity logs, analytics, content, and FAQs.
 - `src/middlewares`: auth, RBAC, API keys, validation, uploads, security, centralized errors.
 - `src/queues` and `src/workers`: BullMQ image-processing queue and worker.
+- `ai-service`: FastAPI/Python AI inference microservice, GPU-ready for U2Net, RMBG, MODNet, and ONNX routing.
+- `infra`: Kubernetes manifests, Nginx production config, Prometheus config, and deploy/rollback scripts.
 - `src/configs`: environment validation, MongoDB, Redis, Stripe, Cloudinary, Swagger, logging.
 - `docs`: OpenAPI extension files and architecture notes.
 - `nginx`, `Dockerfile`, `docker-compose.yml`, `ecosystem.config.js`: deployment-ready setup.
@@ -31,6 +33,13 @@ Run worker:
 
 ```bash
 npm run worker
+npm run worker:media
+```
+
+Run the complete local stack:
+
+```bash
+docker compose up --build
 ```
 
 ## Important Endpoints
@@ -49,8 +58,9 @@ npm run worker
 
 ## Production Notes
 
-- Replace mock AI provider with a provider implementation in `modules/images/services/ai-provider.service.ts`.
-- Connect Cloudinary or S3 in the upload service.
+- See `docs/ai-infrastructure.md` for the AI pipeline, queue topology, cloud storage strategy, Kubernetes deployment, observability, and hardening checklist.
+- Configure `AI_PROVIDER_ORDER`, `AI_INFERENCE_URL`, and `AI_SERVICE_JWT` before enabling first-party inference.
+- Use S3/GCS/Azure object storage plus CDN in production; local storage URLs are intended for development only.
 - Add Stripe webhook signature verification before enabling live billing.
 - Use strong secrets and managed Redis/MongoDB in production.
 - Run API and workers as separate processes for horizontal scaling.

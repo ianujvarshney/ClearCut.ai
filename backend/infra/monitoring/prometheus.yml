@@ -1,0 +1,15 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: clearcut-api
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["api:5000"]
+  - job_name: clearcut-ai-inference
+    metrics_path: /health
+    static_configs:
+      - targets: ["ai-inference:8000"]
+  - job_name: redis
+    static_configs:
+      - targets: ["redis:6379"]

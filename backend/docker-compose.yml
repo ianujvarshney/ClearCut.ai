@@ -7,6 +7,7 @@ services:
     depends_on:
       - mongo
       - redis
+      - ai-inference
     restart: unless-stopped
   worker:
     build: .
@@ -16,7 +17,32 @@ services:
       - api
       - redis
       - mongo
+      - ai-inference
     restart: unless-stopped
+  media-worker:
+    build: .
+    command: node dist/src/workers/media.worker.js
+    env_file: .env
+    depends_on:
+      - redis
+      - mongo
+    restart: unless-stopped
+  ai-inference:
+    build:
+      context: ./ai-service
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ai_models:/models
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
   mongo:
     image: mongo:7
     ports:
@@ -27,6 +53,9 @@ services:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
   nginx:
     image: nginx:1.27-alpine
     ports:
@@ -35,5 +64,22 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - api
+  prometheus:
+    image: prom/prometheus:v2.55.1
+    profiles: ["observability"]
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./infra/monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+  grafana:
+    image: grafana/grafana:11.4.0
+    profiles: ["observability"]
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
 volumes:
   mongo_data:
+  redis_data:
+  grafana_data:
+  ai_models:

@@ -5,7 +5,8 @@ import { BullMQAdapter } from "@bull-board/api/bullMQAdapter";
 import { ExpressAdapter } from "@bull-board/express";
 import { env } from "@/configs/env";
 import { swaggerSpec } from "@/configs/swagger";
-import { getImageProcessingQueue } from "@/queues/image.queue";
+import { metricsHandler } from "@/configs/metrics";
+import { getCleanupQueue, getImageOptimizationQueue, getImageProcessingQueue, getThumbnailQueue } from "@/queues/image.queue";
 import { applySecurity } from "@/middlewares/security.middleware";
 import { errorHandler, notFoundHandler } from "@/middlewares/error.middleware";
 import { apiRouter } from "@/routes";
@@ -22,7 +23,12 @@ export function createApp() {
     const bullServerAdapter = new ExpressAdapter();
     bullServerAdapter.setBasePath("/admin/queues");
     createBullBoard({
-      queues: [new BullMQAdapter(getImageProcessingQueue())],
+      queues: [
+        new BullMQAdapter(getImageProcessingQueue()),
+        new BullMQAdapter(getImageOptimizationQueue()),
+        new BullMQAdapter(getThumbnailQueue()),
+        new BullMQAdapter(getCleanupQueue())
+      ],
       serverAdapter: bullServerAdapter
     });
     app.use("/admin/queues", bullServerAdapter.getRouter());
@@ -39,6 +45,7 @@ export function createApp() {
       }
     });
   });
+  app.get("/metrics", metricsHandler);
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
   app.use(env.API_PREFIX, apiRouter);
   app.use(notFoundHandler);

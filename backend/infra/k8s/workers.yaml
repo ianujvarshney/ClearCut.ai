@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clearcut-image-worker
+  namespace: clearcut
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: clearcut-image-worker
+  template:
+    metadata:
+      labels:
+        app: clearcut-image-worker
+    spec:
+      containers:
+        - name: worker
+          image: ghcr.io/your-org/clearcut-api:latest
+          command: ["node", "dist/src/workers/image.worker.js"]
+          envFrom:
+            - configMapRef:
+                name: clearcut-config
+            - secretRef:
+                name: clearcut-secrets
+          resources:
+            requests:
+              cpu: "1"
+              memory: 1Gi
+            limits:
+              cpu: "2"
+              memory: 2Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clearcut-media-worker
+  namespace: clearcut
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: clearcut-media-worker
+  template:
+    metadata:
+      labels:
+        app: clearcut-media-worker
+    spec:
+      containers:
+        - name: media-worker
+          image: ghcr.io/your-org/clearcut-api:latest
+          command: ["node", "dist/src/workers/media.worker.js"]
+          envFrom:
+            - configMapRef:
+                name: clearcut-config
+            - secretRef:
+                name: clearcut-secrets
+          resources:
+            requests:
+              cpu: 500m
+              memory: 512Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi

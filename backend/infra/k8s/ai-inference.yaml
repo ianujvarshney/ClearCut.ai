@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-inference
+  namespace: clearcut
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-inference
+  template:
+    metadata:
+      labels:
+        app: ai-inference
+    spec:
+      nodeSelector:
+        accelerator: nvidia
+      containers:
+        - name: ai-inference
+          image: ghcr.io/your-org/clearcut-ai-inference:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: clearcut-config
+            - secretRef:
+                name: clearcut-secrets
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+              memory: 8Gi
+              cpu: "4"
+            requests:
+              memory: 4Gi
+              cpu: "2"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 20
+            periodSeconds: 15
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-inference
+  namespace: clearcut
+spec:
+  selector:
+    app: ai-inference
+  ports:
+    - port: 8000
+      targetPort: 8000

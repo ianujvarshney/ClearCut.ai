@@ -5,6 +5,11 @@ const processingJobSchema = new Schema(
     userId: { type: Types.ObjectId, ref: "User", required: true, index: true },
     imageIds: [{ type: Types.ObjectId, ref: "Image" }],
     queueJobId: { type: String, index: true },
+    background: {
+      type: { type: String, enum: ["transparent", "white", "color", "image"], default: "transparent" },
+      value: String
+    },
+    model: { type: String, enum: ["u2net", "rmbg", "modnet", "onnx-u2net"], default: "rmbg" },
     provider: { type: String, default: "mock-ai" },
     status: { type: String, enum: ["queued", "processing", "completed", "failed", "retrying"], default: "queued", index: true },
     attempts: { type: Number, default: 0 },

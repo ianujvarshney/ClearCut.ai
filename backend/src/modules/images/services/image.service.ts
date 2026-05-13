@@ -1,20 +1,33 @@
 import { getImageProcessingQueue } from "@/queues/image.queue";
 import { ApiError } from "@/utils/ApiError";
 import { getPagination } from "@/utils/pagination";
+import { env } from "@/configs/env";
+import { ObjectStorageService } from "@/modules/storage/object-storage.service";
 import { ImageRepository } from "../repositories/image.repository";
 import type { Request } from "express";
 
 export class ImageService {
-  constructor(private readonly repo = new ImageRepository()) {}
+  constructor(
+    private readonly repo = new ImageRepository(),
+    private readonly storage = new ObjectStorageService()
+  ) {}
 
   async upload(userId: string, file: Express.Multer.File) {
     if (!file) throw new ApiError(400, "Image file is required", "FILE_REQUIRED");
+    const object = await this.storage.putImage({
+      userId,
+      buffer: file.buffer,
+      originalName: file.originalname,
+      mimeType: file.mimetype,
+      folder: "uploads"
+    });
     return this.repo.createImage({
       userId,
       original: {
-        url: `/uploads/${Date.now()}-${file.originalname}`,
-        bytes: file.size,
-        mimeType: file.mimetype
+        url: object.url,
+        publicId: object.publicId,
+        bytes: object.bytes,
+        mimeType: object.mimeType
       },
       status: "uploaded"
     });
@@ -30,8 +43,16 @@ export class ImageService {
   }
 
   async enqueue(userId: string, imageIds: string[], background = { type: "transparent" as const }) {
-    const processingJob = await this.repo.createProcessingJob({ userId, imageIds, background, status: "queued" });
-    const queueJob = await getImageProcessingQueue().add("remove-background", { userId, imageIds, background });
+    const processingJob = await this.repo.createProcessingJob({ userId, imageIds, background, model: env.AI_MODEL_DEFAULT, provider: env.AI_PROVIDER_ORDER, status: "queued" });
+    const queueJob = await getImageProcessingQueue().add("remove-background", {
+      processingJobId: processingJob.id,
+      userId,
+      imageIds,
+      background,
+      model: env.AI_MODEL_DEFAULT,
+      priority: imageIds.length > 1 ? "batch" : "standard",
+      requestedAt: new Date().toISOString()
+    });
     await processingJob.updateOne({ queueJobId: queueJob.id });
     await Promise.all(imageIds.map((imageId) => this.repo.updateImage(imageId, { status: "queued", background })));
     return { jobId: processingJob.id, queueJobId: queueJob.id, status: "queued" };
@@ -47,7 +68,8 @@ export class ImageService {
     const image = await this.repo.findImage(imageId, userId);
     if (!image) throw new ApiError(404, "Image not found", "IMAGE_NOT_FOUND");
     await this.repo.updateImage(imageId, { $inc: { downloadCount: 1 } });
-    return { url: image.processed?.url ?? image.original?.url, signed: true, expiresIn: 300 };
+    const publicIdOrUrl = image.processed?.publicId ?? image.processed?.url ?? image.original?.publicId ?? image.original?.url;
+    return { url: this.storage.getSignedReadUrl(publicIdOrUrl), signed: true, expiresIn: env.SIGNED_URL_TTL_SECONDS };
   }
 
   retry(userId: string, jobId: string) {

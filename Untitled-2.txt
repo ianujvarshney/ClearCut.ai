@@ -1,0 +1,955 @@
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:33:50.127+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438030,"ts_usec":127782,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 5, snapshot max: 5 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:34:50.172+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438090,"ts_usec":172561,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 6, snapshot max: 6 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:35:50.207+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438150,"ts_usec":207189,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 7, snapshot max: 7 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:36:50.237+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438210,"ts_usec":237539,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 8, snapshot max: 8 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:37:50.265+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438270,"ts_usec":265139,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 9, snapshot max: 9 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:38:50.296+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438330,"ts_usec":296390,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 10, snapshot max: 10 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+mongo-1         | {"t":{"$date":"2026-05-10T18:39:50.328+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438390,"ts_usec":327985,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 11, snapshot max: 11 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:40:50.356+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438450,"ts_usec":356240,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 12, snapshot max: 12 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+mongo-1         | {"t":{"$date":"2026-05-10T18:41:50.409+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438510,"ts_usec":409731,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 13, snapshot max: 13 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:42:50.434+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438570,"ts_usec":434716,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 14, snapshot max: 14 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:43:50.469+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438630,"ts_usec":469017,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 15, snapshot max: 15 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:44:50.498+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438690,"ts_usec":498003,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 16, snapshot max: 16 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:45:50.520+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438750,"ts_usec":520461,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 17, snapshot max: 17 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+api-1           | node:internal/modules/cjs/loader:1386
+api-1           |   throw err;
+api-1           |   ^
+api-1           | 
+api-1           | Error: Cannot find module '@/app'
+api-1           | Require stack:
+api-1           | - /app/dist/src/server.js
+api-1           |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+api-1           |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+api-1           |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+api-1           |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+api-1           |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+api-1           |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+api-1           |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+api-1           |     at require (node:internal/modules/helpers:147:16)
+api-1           |     at Object.<anonymous> (/app/dist/src/server.js:7:15)
+api-1           |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+api-1           |   code: 'MODULE_NOT_FOUND',
+api-1           |   requireStack: [ '/app/dist/src/server.js' ]
+api-1           | }
+api-1           | 
+api-1           | Node.js v22.22.2
+api-1 exited with code 1
+mongo-1         | {"t":{"$date":"2026-05-10T18:46:50.546+00:00"},"s":"I",  "c":"WTCHKPT",  "id":22430,   "ctx":"Checkpointer","msg":"WiredTiger message","attr":{"message":{"ts_sec":1778438810,"ts_usec":546292,"thread":"1:0x7f43ad838640","session_name":"WT_SESSION.checkpoint","category":"WT_VERB_CHECKPOINT_PROGRESS","category_id":6,"verbose_level":"DEBUG_1","verbose_level_id":1,"msg":"saving checkpoint snapshot min: 18, snapshot max: 18 snapshot count: 0, oldest timestamp: (0, 0) , meta checkpoint timestamp: (0, 0) base write gen: 70"}}}
+media-worker-1  | node:internal/modules/cjs/loader:1386
+media-worker-1  |   throw err;
+media-worker-1  |   ^
+media-worker-1  | 
+media-worker-1  | Error: Cannot find module '@/configs/database'
+media-worker-1  | Require stack:
+media-worker-1  | - /app/dist/src/workers/media.worker.js
+media-worker-1  |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+media-worker-1  |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+media-worker-1  |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+media-worker-1  |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+media-worker-1  |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+media-worker-1  |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+media-worker-1  |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+media-worker-1  |     at require (node:internal/modules/helpers:147:16)
+media-worker-1  |     at Object.<anonymous> (/app/dist/src/workers/media.worker.js:4:20)
+media-worker-1  |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+media-worker-1  |   code: 'MODULE_NOT_FOUND',
+media-worker-1  |   requireStack: [ '/app/dist/src/workers/media.worker.js' ]
+media-worker-1  | }
+media-worker-1  | 
+media-worker-1  | Node.js v22.22.2
+media-worker-1 exited with code 1
+worker-1        | node:internal/modules/cjs/loader:1386
+worker-1        |   throw err;
+worker-1        |   ^
+worker-1        | 
+worker-1        | Error: Cannot find module '@/configs/redis'
+worker-1        | Require stack:
+worker-1        | - /app/dist/src/workers/image.worker.js
+worker-1        |     at Function._resolveFilename (node:internal/modules/cjs/loader:1383:15)
+worker-1        |     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+worker-1        |     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+worker-1        |     at Function._load (node:internal/modules/cjs/loader:1192:37)
+worker-1        |     at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+worker-1        |     at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+worker-1        |     at Module.require (node:internal/modules/cjs/loader:1463:12)
+worker-1        |     at require (node:internal/modules/helpers:147:16)
+worker-1        |     at Object.<anonymous> (/app/dist/src/workers/image.worker.js:4:17)
+worker-1        |     at Module._compile (node:internal/modules/cjs/loader:1705:14) {
+worker-1        |   code: 'MODULE_NOT_FOUND',
+worker-1        |   requireStack: [ '/app/dist/src/workers/image.worker.js' ]
+worker-1        | }
+worker-1        | 
+worker-1        | Node.js v22.22.2
+worker-1 exited with code 1
+
+v View in Docker Desktop   o View Config   w Enable Watch

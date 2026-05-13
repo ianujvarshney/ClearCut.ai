@@ -9,6 +9,7 @@ export function getRedisConnection() {
       host: env.REDIS_HOST,
       port: env.REDIS_PORT,
       password: env.REDIS_PASSWORD,
+      tls: env.REDIS_TLS ? {} : undefined,
       maxRetriesPerRequest: null,
       enableReadyCheck: false,
       lazyConnect: env.NODE_ENV === "test"

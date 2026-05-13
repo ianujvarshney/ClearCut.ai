@@ -16,6 +16,14 @@ module.exports = {
       env: {
         NODE_ENV: "production"
       }
+    },
+    {
+      name: "clearcut-media-worker",
+      script: "dist/src/workers/media.worker.js",
+      instances: 2,
+      env: {
+        NODE_ENV: "production"
+      }
     }
   ]
 };
